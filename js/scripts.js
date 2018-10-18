@@ -5,91 +5,90 @@ $(document).ready(function() {
     var hair = $("input:radio[name=inputHair]:checked").val();
     var activities = $("input:radio[name=inputActivities]:checked").val();
 
-    // if ((ageGroup === "18-21" || ageGroup === "22-29") && gender === "Male") {
-    //   $("#celebrityA").show();
-    // }
-    //
-    // if (ageGroup === "30-40" && gender === "Male") {
-    //   $("#celebrityB").show();
-    // }
-    //
-    // if (ageGroup === "41+" && gender === "Male") {
-    //   $("#celebrityC").show();
-    // }
+    if (ageGroup === "18-21" && gender === "Male" && hair === "Blonde" && activities === "Outdoor Stuff") { /*This starts the wrapper celebrity A*/
 
-    if (gender === "Male") { /*This starts the wrapper of if equals male*/
-
-        if (ageGroup === "18-21" || ageGroup === "22-29") {
           $("#celebrityA").show();
+          $("#celebrityB").hide();
+          $("#celebrityC").hide();
+          $("#celebrityD").hide();
+          $("#celebrityE").hide();
+          $("#celebrityF").hide();
+          $("#celebrityG").hide();
 
-        } else {
-          $("#celebrityB").show();
-        }
+      } /*This ends the wrapper of celebrity A*/
 
-  } /*This ends the wrapper of if equals male*/
-      else { /*This starts the wrapper of if equals female*/
+      else  if (ageGroup === "22-29" && gender === "Male" && hair === "Brunette" && activities === "Reading") { /*This starts the wrapper celebrity B*/
 
+        $("#celebrityA").hide();
+        $("#celebrityB").show();
+        $("#celebrityC").hide();
+        $("#celebrityD").hide();
+        $("#celebrityE").hide();
+        $("#celebrityF").hide();
+        $("#celebrityG").hide();
 
-        if (ageGroup === "18-21" || ageGroup === "22-29") {
-          $("#celebrityC").show();
+      } /*This ends the wrapper celebrity B*/
 
-        } else {
-          $("#celebrityD").show();
-        }
+      else  if (ageGroup === "30-40" && gender === "Male" && hair === "Redhead" && activities === "Travel") { /*This starts the wrapper celebrity C*/
 
+        $("#celebrityA").hide();
+        $("#celebrityB").hide();
+        $("#celebrityC").show();
+        $("#celebrityD").hide();
+        $("#celebrityE").hide();
+        $("#celebrityF").hide();
+        $("#celebrityG").hide();
 
-      } /*This ends the wrapper of if equals female*/
+      } /*This ends the wrapper celebrity C*/
 
+      else if (ageGroup === "18-21" && gender === "Female" && hair === "Blonde" && activities === "Bar Hopping") { /*This starts the wrapper celebrity D*/
 
+        $("#celebrityA").hide();
+        $("#celebrityB").hide();
+        $("#celebrityC").hide();
+        $("#celebrityD").show();
+        $("#celebrityE").hide();
+        $("#celebrityF").hide();
+        $("#celebrityG").hide();
 
+      } /*This ends the wrapper celebrity D*/
 
+      else if (ageGroup === "22-29" && gender === "Female" && hair === "Brunette" && activities === "Outdoor Stuff") { /*This starts the wrapper celebrity E*/
 
+        $("#celebrityA").hide();
+        $("#celebrityB").hide();
+        $("#celebrityC").hide();
+        $("#celebrityD").hide();
+        $("#celebrityE").show();
+        $("#celebrityF").hide();
+        $("#celebrityG").hide();
+
+      } /*This ends the wrapper celebrity E*/
+
+      else if (ageGroup === "30-40" && gender === "Female" && hair === "Redhead" && activities === "Reading") { /*This starts the wrapper celebrity F*/
+
+        $("#celebrityA").hide();
+        $("#celebrityB").hide();
+        $("#celebrityC").hide();
+        $("#celebrityD").hide();
+        $("#celebrityE").hide();
+        $("#celebrityF").show();
+        $("#celebrityG").hide();
+
+      } /*This ends the wrapper celebrity F*/
+
+      else { /*This starts the wrapper celebrity G - NO MATCH*/
+
+        $("#celebrityA").hide();
+        $("#celebrityB").hide();
+        $("#celebrityC").hide();
+        $("#celebrityD").hide();
+        $("#celebrityE").hide();
+        $("#celebrityF").hide();
+        $("#celebrityG").show();
+
+      } /*This ends the wrapper celebrity G NO MATCH*/
 
     event.preventDefault();
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // $("#formOne").submit(function(event) {
-  //   // var age = parseInt("#formOne");
-  //   var age = $("input#inputAge").val();
-  //
-  //   if (age >=18) {
-  //     $("#oldEnough").show();
-  //     $("#tooYoung").hide();
-  //   } else {
-  //     $("#tooYoung").show();
-  //     $("#oldEnough").hide();
-  //   }
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //   event.preventDefault();
-  // });
-
-
-
-
-
-
-
-
-
 });
