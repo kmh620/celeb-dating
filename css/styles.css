@@ -28,3 +28,19 @@
 #celebrityG {
   display: none;
 }
+
+#formAboutYou {
+  margin: 10px;
+  border: 2px solid cornsilk;
+  padding: 20px;
+  background-color: cornsilk;
+
+}
+
+.style-celebrity {
+  margin: 10px;
+  border: 2px solid cornflowerBlue;
+  padding: 20px;
+  background-color: cornflowerBlue;
+
+}
