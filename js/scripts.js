@@ -17,22 +17,28 @@ $(document).ready(function() {
     //   $("#celebrityC").show();
     // }
 
-    if (ageGroup === "18-21") {
-      $("#celebrityA").show();
+    if (gender === "Male") { /*This starts the wrapper of if equals male*/
+
+        if (ageGroup === "18-21" || ageGroup === "22-29") {
+          $("#celebrityA").show();
+
+        } else {
+          $("#celebrityB").show();
+        }
+
+  } /*This ends the wrapper of if equals male*/
+      else { /*This starts the wrapper of if equals female*/
 
 
-    } else if (ageGroup === "22-29") {
-      $("#celebrityB").show();
+        if (ageGroup === "18-21" || ageGroup === "22-29") {
+          $("#celebrityC").show();
+
+        } else {
+          $("#celebrityD").show();
+        }
 
 
-    } else if (ageGroup === "30-40") {
-      $("#celebrityC").show();
-
-
-    } else {
-      $("#celebrityD").show();
-    }
-
+      } /*This ends the wrapper of if equals female*/
 
 
 
